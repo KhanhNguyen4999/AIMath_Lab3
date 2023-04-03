@@ -118,14 +118,25 @@ class Graph:
 
             print("key: {}, pred: {}, distance: {}".format(key, pred, distance))
 
+    def show_graph(self):
+        print("### List edge from graph ###")
+        for v in self.vertList.values():
+            for w in v.getConnections():
+                print(f"( {v.getId()} , {w.getId()} )")
+
     def transpose_graph(self):
-        g = Graph()
+        g = Graph() 
+        for v in self.getVertices():
+            g.addVertex(key=v)
 
         for v in self.vertList.values():
             for w in v.getConnections():
                 src = v.getId()
                 tgt = w.getId()
                 g.addEdge(tgt, src)
+                
+        g.show_graph()
+        
         return g
                 
 
@@ -169,12 +180,12 @@ if __name__ == '__main__':
     g.addEdge(0, 2)
     g.addEdge(2, 1)
     g.addEdge(0, 3)
-    g.addEdge(3, 4)
+    #g.addEdge(3, 4)
 
-    print("GRAPH: ")
-    for v in g:
-        for w in v.getConnections():
-            print(f"( {v.getId()} , {w.getId()} )")
+    #print("GRAPH: ")
+    #for v in g:
+    #    for w in v.getConnections():
+    #        print(f"( {v.getId()} , {w.getId()} )")
 
     # Get group scc
     print("GROUP SCC:")
