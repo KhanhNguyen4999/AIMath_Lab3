@@ -1,7 +1,7 @@
-# AIMath_Lab2
+# AIMath_Lab3
 
-Lab 02: Code thuật toán BFS và DFS từ cấu trúc dữ liệu Graph
-Lab 03: Trích xuất đồ thị liên thông mạnh từ đồ thị lớn.
+- Lab 02: Code thuật toán BFS và DFS từ cấu trúc dữ liệu Graph
+- Lab 03: Trích xuất đồ thị liên thông mạnh từ đồ thị lớn.
 
 ## Thành viên:
 - 22C15009 - Nguyễn Ngọc Minh Khánh
